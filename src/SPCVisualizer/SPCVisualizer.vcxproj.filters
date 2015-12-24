@@ -21,6 +21,9 @@
     <ClCompile Include="SoundModule.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SoundModule.h">
@@ -30,6 +33,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SPCFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IGfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IRender.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DIntf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GTypes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

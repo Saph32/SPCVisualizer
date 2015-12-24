@@ -7,6 +7,8 @@
 #pragma comment(lib, "SDL2.lib")
 #pragma comment(lib, "SDL2main.lib")
 
+#include "DCore.h"
+
 using namespace std;
 
 SoundModule g_oSoundModule = {};
@@ -18,9 +20,16 @@ void SdlAudioCb(void* pUser, uint8* stream, int len)
 
 int main(int argc, char* argv[])
 {
-    if (SDL_Init(SDL_INIT_AUDIO) < 0)
+    DCore dCore;
+
+    if (!dCore.Init())
     {
         return 1;
+    }
+
+    if (SDL_Init(SDL_INIT_AUDIO) < 0)
+    {
+        return 2;
     }
 
     SDL_AudioSpec spec = {};

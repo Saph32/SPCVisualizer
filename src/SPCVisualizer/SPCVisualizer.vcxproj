@@ -132,11 +132,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DCore.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="SoundModule.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseTypes.h" />
+    <ClInclude Include="DCore.h" />
+    <ClInclude Include="DIntf.h" />
+    <ClInclude Include="GTypes.h" />
+    <ClInclude Include="IGfx.h" />
+    <ClInclude Include="IRender.h" />
     <ClInclude Include="SoundModule.h" />
     <ClInclude Include="SPCFile.h" />
   </ItemGroup>
