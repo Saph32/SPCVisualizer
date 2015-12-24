@@ -82,7 +82,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\processor\spc700;..\dsp\;..\..\..\..\src\SMEmu;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\processor\spc700;..\dsp\;..\..\..\..\src\SPCVisualizer;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4800</DisableSpecificWarnings>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -96,7 +96,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\processor\spc700;..\dsp\;..\..\..\..\src\SMEmu;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\processor\spc700;..\dsp\;..\..\..\..\src\SPCVisualizer;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4800</DisableSpecificWarnings>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -112,7 +112,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\processor\spc700;..\dsp\;..\..\..\..\src\SMEmu;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\processor\spc700;..\dsp\;..\..\..\..\src\SPCVisualizer;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4800</DisableSpecificWarnings>
     </ClCompile>
@@ -129,7 +129,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\processor\spc700;..\dsp\;..\..\..\..\src\SMEmu;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\processor\spc700;..\dsp\;..\..\..\..\src\SPCVisualizer;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4800</DisableSpecificWarnings>
     </ClCompile>

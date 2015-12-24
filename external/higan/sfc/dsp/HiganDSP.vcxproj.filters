@@ -36,6 +36,9 @@
     <ClCompile Include="voice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="counter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dsp.hpp">
@@ -43,9 +46,6 @@
     </ClInclude>
     <ClInclude Include="moduloarray.hpp">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="counter.inl">
-      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
