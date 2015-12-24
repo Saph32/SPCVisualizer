@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPCVisualizer", "SPCVisualizer.vcxproj", "{3D5A36CE-7868-4E56-9163-08EAAE3E58CF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{50A89A2E-E057-4ACA-AE7F-CC6CEF659DE1} = {50A89A2E-E057-4ACA-AE7F-CC6CEF659DE1}
+		{4014D68A-A7AB-41B7-BB9F-7E23EE8A29C2} = {4014D68A-A7AB-41B7-BB9F-7E23EE8A29C2}
+		{CB273790-C2CC-49F5-84C2-D5EA2A6A84DF} = {CB273790-C2CC-49F5-84C2-D5EA2A6A84DF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HiganSPC700", "..\..\external\higan\processor\spc700\HiganSPC700.vcxproj", "{50A89A2E-E057-4ACA-AE7F-CC6CEF659DE1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HiganSMP", "..\..\external\higan\sfc\smp\HiganSMP.vcxproj", "{4014D68A-A7AB-41B7-BB9F-7E23EE8A29C2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HiganDSP", "..\..\external\higan\sfc\dsp\HiganDSP.vcxproj", "{CB273790-C2CC-49F5-84C2-D5EA2A6A84DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D5A36CE-7868-4E56-9163-08EAAE3E58CF}.Debug|x64.ActiveCfg = Debug|x64
+		{3D5A36CE-7868-4E56-9163-08EAAE3E58CF}.Debug|x64.Build.0 = Debug|x64
+		{3D5A36CE-7868-4E56-9163-08EAAE3E58CF}.Debug|x86.ActiveCfg = Debug|Win32
+		{3D5A36CE-7868-4E56-9163-08EAAE3E58CF}.Debug|x86.Build.0 = Debug|Win32
+		{3D5A36CE-7868-4E56-9163-08EAAE3E58CF}.Release|x64.ActiveCfg = Release|x64
+		{3D5A36CE-7868-4E56-9163-08EAAE3E58CF}.Release|x64.Build.0 = Release|x64
+		{3D5A36CE-7868-4E56-9163-08EAAE3E58CF}.Release|x86.ActiveCfg = Release|Win32
+		{3D5A36CE-7868-4E56-9163-08EAAE3E58CF}.Release|x86.Build.0 = Release|Win32
+		{50A89A2E-E057-4ACA-AE7F-CC6CEF659DE1}.Debug|x64.ActiveCfg = Debug|x64
+		{50A89A2E-E057-4ACA-AE7F-CC6CEF659DE1}.Debug|x64.Build.0 = Debug|x64
+		{50A89A2E-E057-4ACA-AE7F-CC6CEF659DE1}.Debug|x86.ActiveCfg = Debug|Win32
+		{50A89A2E-E057-4ACA-AE7F-CC6CEF659DE1}.Debug|x86.Build.0 = Debug|Win32
+		{50A89A2E-E057-4ACA-AE7F-CC6CEF659DE1}.Release|x64.ActiveCfg = Release|x64
+		{50A89A2E-E057-4ACA-AE7F-CC6CEF659DE1}.Release|x64.Build.0 = Release|x64
+		{50A89A2E-E057-4ACA-AE7F-CC6CEF659DE1}.Release|x86.ActiveCfg = Release|Win32
+		{50A89A2E-E057-4ACA-AE7F-CC6CEF659DE1}.Release|x86.Build.0 = Release|Win32
+		{4014D68A-A7AB-41B7-BB9F-7E23EE8A29C2}.Debug|x64.ActiveCfg = Debug|x64
+		{4014D68A-A7AB-41B7-BB9F-7E23EE8A29C2}.Debug|x64.Build.0 = Debug|x64
+		{4014D68A-A7AB-41B7-BB9F-7E23EE8A29C2}.Debug|x86.ActiveCfg = Debug|Win32
+		{4014D68A-A7AB-41B7-BB9F-7E23EE8A29C2}.Debug|x86.Build.0 = Debug|Win32
+		{4014D68A-A7AB-41B7-BB9F-7E23EE8A29C2}.Release|x64.ActiveCfg = Release|x64
+		{4014D68A-A7AB-41B7-BB9F-7E23EE8A29C2}.Release|x64.Build.0 = Release|x64
+		{4014D68A-A7AB-41B7-BB9F-7E23EE8A29C2}.Release|x86.ActiveCfg = Release|Win32
+		{4014D68A-A7AB-41B7-BB9F-7E23EE8A29C2}.Release|x86.Build.0 = Release|Win32
+		{CB273790-C2CC-49F5-84C2-D5EA2A6A84DF}.Debug|x64.ActiveCfg = Debug|x64
+		{CB273790-C2CC-49F5-84C2-D5EA2A6A84DF}.Debug|x64.Build.0 = Debug|x64
+		{CB273790-C2CC-49F5-84C2-D5EA2A6A84DF}.Debug|x86.ActiveCfg = Debug|Win32
+		{CB273790-C2CC-49F5-84C2-D5EA2A6A84DF}.Debug|x86.Build.0 = Debug|Win32
+		{CB273790-C2CC-49F5-84C2-D5EA2A6A84DF}.Release|x64.ActiveCfg = Release|x64
+		{CB273790-C2CC-49F5-84C2-D5EA2A6A84DF}.Release|x64.Build.0 = Release|x64
+		{CB273790-C2CC-49F5-84C2-D5EA2A6A84DF}.Release|x86.ActiveCfg = Release|Win32
+		{CB273790-C2CC-49F5-84C2-D5EA2A6A84DF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
