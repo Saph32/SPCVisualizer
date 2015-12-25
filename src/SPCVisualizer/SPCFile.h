@@ -2,9 +2,8 @@
 
 #include "BaseTypes.h"
 
-struct SPCFile
-{
-    char header[33];
+struct SPCFile {
+    char  header[33];
     uint8 id666Tag[3];
     uint8 minor;
 
@@ -14,7 +13,7 @@ struct SPCFile
     uint8 y;
     uint8 psw;
     uint8 sp;
-    char reserved[2];
+    char  reserved[2];
 
     char song[32];
     char game[32];
@@ -28,7 +27,7 @@ struct SPCFile
 
     uint8 channel;
     uint8 emulator;
-    char reserved2[45];
+    char  reserved2[45];
 
     uint8 ram[65536];
     uint8 dspRegs[128];

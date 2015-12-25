@@ -4,51 +4,36 @@
 
 namespace G {
 
-    struct Size
-    {
-        int32 w;
-        int32 h;
-    };
+template <typename T>
+struct SizeT {
+    T w;
+    T h;
+};
 
-    struct SizeF
-    {
-        float w;
-        float h;
-    };
+typedef SizeT<int32> Size;
+typedef SizeT<float> SizeF;
 
-    struct Pos
-    {
-        int32 x;
-        int32 y;
-    };
+template <typename T>
+struct PosT {
+    T x;
+    T y;
+};
 
-    struct PosF
-    {
-        float x;
-        float y;
-    };
+typedef PosT<int32> Pos;
+typedef PosT<float> PosF;
 
-    struct Rect
-    {
-        int32 l;
-        int32 r;
-        int32 t;
-        int32 b;
+template <typename T>
+struct RectT {
+    T l;
+    T r;
+    T t;
+    T b;
 
-        constexpr int32 Width() const { return r - l; }
-        constexpr int32 Height() const { return b - t; }
-        constexpr bool IsEmpty() const { return  r <= l || b <= t; }
-    };
+    constexpr int32 Width() const { return r - l; }
+    constexpr int32 Height() const { return b - t; }
+    constexpr bool  IsEmpty() const { return r <= l || b <= t; }
+};
 
-    struct RectF
-    {
-        float l;
-        float r;
-        float t;
-        float b;
-
-        constexpr float Width() const { return r - l; }
-        constexpr float Height() const { return b - t; }
-        constexpr bool IsEmpty() const { return  r <= l || b <= t; }
-    };
+typedef struct RectT<int32> Rect;
+typedef struct RectT<float> RectF;
 }

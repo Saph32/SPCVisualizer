@@ -137,6 +137,7 @@
     <ClCompile Include="SoundModule.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AutoHandle.h" />
     <ClInclude Include="BaseTypes.h" />
     <ClInclude Include="DCore.h" />
     <ClInclude Include="DIntf.h" />

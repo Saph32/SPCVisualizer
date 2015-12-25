@@ -50,5 +50,8 @@
     <ClInclude Include="GTypes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AutoHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
