@@ -12,6 +12,7 @@ AllowShortIfStatementsOnASingleLine: false
 AllowShortLoopsOnASingleLine: false
 AlignTrailingComments: true
 BinPackParameters: false
+BinPackArguments: false
 AllowAllParametersOfDeclarationOnNextLine: true
 BreakConstructorInitializersBeforeComma: true
 ConstructorInitializerAllOnOneLineOrOnePerLine: true
