@@ -4,9 +4,18 @@
 
 #include <fstream>
 #include <string>
+#include <mutex>
+#include <deque>
 
 class SoundModule final {
   public:
+
+      struct VisState
+      {
+          std::deque<int16> sampsL;
+          std::deque<int16> sampsR;
+      };
+
     SoundModule() = default;
 
     uint8 ReadRam(uint16 uiAddr);
@@ -26,6 +35,9 @@ class SoundModule final {
 
     bool LoadSPCFile(std::string fileName);
 
+    VisState& RefVis() { return m_visState; }
+    VisState GetVis();
+
   private:
     uint8 m_aRam[64 * 1024] = {};
 
@@ -38,6 +50,9 @@ class SoundModule final {
 
     int16* m_pStream      = nullptr;
     int    m_iSamplesLeft = 0;
+
+    VisState m_visState = {};
+    std::mutex m_mutex;
 };
 
 extern SoundModule g_oSoundModule;

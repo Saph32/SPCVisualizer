@@ -277,7 +277,7 @@ void DCore::RenderFrame() {
         m_pRender->RenderFrame();
     }
 
-    m_pSwapChain->Present(0, 0);
+    m_pSwapChain->Present(1, 0);
 }
 
 void DCore::DrawFillRect(const G::RectF& rRect, const G::Color rColor) {

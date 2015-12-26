@@ -39,6 +39,9 @@
     <ClCompile Include="DSolidBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="VolMeter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SoundModule.h">
@@ -96,6 +99,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ISolidBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VolMeter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

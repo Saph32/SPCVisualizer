@@ -10,8 +10,8 @@ class DSolidBox : public G::ISolidBox {
     virtual ~DSolidBox() override {}
 
     // Interface implementation: IFillRect
-    virtual G::Color GetColor() override { return m_color; }
-    virtual G::RectF GetRect() override { return m_rect; }
+    virtual G::Color GetColor() const override { return m_color; }
+    virtual G::RectF GetRect() const override { return m_rect; }
 
     virtual void SetColor(const G::Color& rColor) override { m_color = rColor; }
     virtual void SetRect(const G::RectF& rRect) override { m_rect = rRect; }

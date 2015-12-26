@@ -4,6 +4,8 @@
 #include "dsp.hpp"
 #include "smp.hpp"
 
+#include <algorithm>
+#include <cmath>
 #include <cstdio>
 #include <memory>
 
@@ -40,6 +42,17 @@ void SoundModule::PushSample(int16 iLeft, int16 iRight) {
     ++m_pStream;
 
     m_iSamplesLeft--;
+
+    if (m_visState.sampsL.size() >= 1024) {
+        m_visState.sampsL.pop_front();
+    }
+
+    if (m_visState.sampsR.size() >= 1024) {
+        m_visState.sampsR.pop_front();
+    }
+
+    m_visState.sampsL.push_back(iLeft);
+    m_visState.sampsR.push_back(iRight);
 }
 
 uint8 SoundModule::ReadDspReg(uint8 uiAddr) {
@@ -83,6 +96,8 @@ int SoundModule::Run(int clocks) {
 }
 
 void SoundModule::GenerateSamples(int16* pStream, int nbSamples) {
+    lock_guard<mutex> lock(m_mutex);
+
     m_pStream      = pStream;
     m_iSamplesLeft = nbSamples;
 
@@ -138,4 +153,10 @@ bool SoundModule::LoadSPCFile(std::string fileName) {
     smp.reload_state();
 
     return true;
+}
+
+SoundModule::VisState SoundModule::GetVis() {
+    lock_guard<mutex> lock(m_mutex);
+
+    return m_visState;
 }
