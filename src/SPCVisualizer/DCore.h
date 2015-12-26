@@ -1,6 +1,7 @@
 #pragma once
 
 #include "DIntf.h"
+#include "DRender.h"
 
 #include <atomic>
 #include <functional>
@@ -9,7 +10,7 @@
 
 #include "unique_handle.h"
 
-class DCore {
+class DCore final {
   public:
     typedef std::function<bool()> RenderCbFn;
 
@@ -21,6 +22,9 @@ class DCore {
 
     bool Init();
     void Release();
+
+    void AttachRender(DRender& rRender);
+    void DetechRender(DRender&);
 
   private:
     std::mutex m_mutex;
@@ -43,6 +47,8 @@ class DCore {
 
     bool m_classRegistered = false;
     HWND m_hWnd = NULL;
+
+    DRender* m_pRender = nullptr;
 
     static LRESULT CALLBACK WindowProcProxy(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 

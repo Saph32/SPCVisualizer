@@ -5,7 +5,7 @@
 #include <fstream>
 #include <string>
 
-class SoundModule {
+class SoundModule final {
   public:
     SoundModule() = default;
 

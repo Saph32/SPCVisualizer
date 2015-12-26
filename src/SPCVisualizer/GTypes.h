@@ -29,11 +29,19 @@ struct RectT {
     T t;
     T b;
 
-    constexpr int32 Width() const { return r - l; }
-    constexpr int32 Height() const { return b - t; }
+    constexpr T Width() const { return r - l; }
+    constexpr T Height() const { return b - t; }
     constexpr bool  IsEmpty() const { return r <= l || b <= t; }
 };
 
 typedef struct RectT<int32> Rect;
 typedef struct RectT<float> RectF;
-}
+
+struct Color {
+    uint8 r;
+    uint8 g;
+    uint8 b;
+    uint8 a;
+};
+
+}  // namespace G

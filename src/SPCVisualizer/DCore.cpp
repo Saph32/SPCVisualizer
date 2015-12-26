@@ -57,6 +57,16 @@ void DCore::Release() {
     }
 }
 
+void DCore::AttachRender(DRender& rRender) {
+    lock_guard<mutex> lock(m_mutex);
+    m_pRender = &rRender;
+}
+
+void DCore::DetechRender(DRender&) {
+    lock_guard<mutex> lock(m_mutex);
+    m_pRender = nullptr;
+}
+
 LRESULT DCore::WindowProcProxy(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
     DCore* pThis = nullptr;
 
@@ -173,35 +183,32 @@ bool DCore::InitD3D() {
                                                  NULL,
                                                  &m_pDevCon);
 
-    if (!SUCCEEDED(hResult))
-    {
+    if (!SUCCEEDED(hResult)) {
         return false;
     }
 
     D3D11Texture2DPtr pBackBuffer = nullptr;
     hResult = m_pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
 
-    if (!SUCCEEDED(hResult))
-    {
+    if (!SUCCEEDED(hResult)) {
         return false;
     }
 
     hResult = m_pDevice->CreateRenderTargetView(pBackBuffer, NULL, &m_pBackBuffer);
 
-    if (!SUCCEEDED(hResult))
-    {
+    if (!SUCCEEDED(hResult)) {
         return false;
     }
 
-    ID3D11RenderTargetView* aRenderTargets[] = { m_pBackBuffer };
+    ID3D11RenderTargetView* aRenderTargets[] = {m_pBackBuffer};
     m_pDevCon->OMSetRenderTargets(1, aRenderTargets, NULL);
 
     D3D11_VIEWPORT viewport = {};
 
     viewport.TopLeftX = 0;
     viewport.TopLeftY = 0;
-    viewport.Width = 1000;
-    viewport.Height = 1000;
+    viewport.Width    = 1;
+    viewport.Height   = 1;
 
     m_pDevCon->RSSetViewports(1, &viewport);
 
@@ -212,9 +219,8 @@ bool DCore::InitD3D() {
 }
 
 void DCore::CleanupD3D() {
-
-    m_pDevCon = nullptr;
-    m_pDevice = nullptr;
+    m_pDevCon    = nullptr;
+    m_pDevice    = nullptr;
     m_pSwapChain = nullptr;
 
     if (m_hWnd) {
@@ -228,10 +234,16 @@ void DCore::CleanupD3D() {
     }
 }
 
-void DCore::RenderFrame()
-{
+void DCore::RenderFrame() {
+    lock_guard<mutex> lock(mutex);
+    
     XMFLOAT4 bkgColor(0.1f, 0.2f, 0.3f, 1.0f);
     m_pDevCon->ClearRenderTargetView(m_pBackBuffer, (FLOAT*)&bkgColor);
+
+    if (m_pRender)
+    {
+        m_pRender->RenderFrame();
+    }
 
     m_pSwapChain->Present(0, 0);
 }
