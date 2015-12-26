@@ -134,7 +134,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DCore.cpp" />
-    <ClCompile Include="DFillRect.cpp" />
+    <ClCompile Include="DSolidBox.cpp" />
     <ClCompile Include="DGfx.cpp" />
     <ClCompile Include="DRender.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -143,13 +143,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="auto.h" />
-    <ClInclude Include="DFillRect.h" />
+    <ClInclude Include="DSolidBox.h" />
     <ClInclude Include="DGfx.h" />
     <ClInclude Include="DRender.h" />
     <ClInclude Include="Flat2DPS.h" />
     <ClInclude Include="Flat2DVS.h" />
     <ClInclude Include="IElem.h" />
-    <ClInclude Include="IFillRect.h" />
+    <ClInclude Include="ISolidBox.h" />
     <ClInclude Include="SplitView.h" />
     <ClInclude Include="Visualizer.h" />
     <ClInclude Include="unique_handle.h" />

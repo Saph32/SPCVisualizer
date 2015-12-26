@@ -30,13 +30,13 @@
     <ClCompile Include="Visualizer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DFillRect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DGfx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DRender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSolidBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -86,16 +86,16 @@
     <ClInclude Include="DGfx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IFillRect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DFillRect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Flat2DPS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Flat2DVS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSolidBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ISolidBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

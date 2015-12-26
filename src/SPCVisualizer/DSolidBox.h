@@ -1,13 +1,13 @@
 #pragma once
 
 #include "DIntf.h"
-#include "IFillRect.h"
+#include "ISolidBox.h"
 
-class DFillRect : public G::IFillRect {
+class DSolidBox : public G::ISolidBox {
   public:
-    DFillRect(DCore& rCore, const G::RectF& rRect, const G::Color& rColor)
+    DSolidBox(DCore& rCore, const G::RectF& rRect, const G::Color& rColor)
         : m_rect(rRect), m_color(rColor), m_rCore(rCore) {}
-    virtual ~DFillRect() override {}
+    virtual ~DSolidBox() override {}
 
     // Interface implementation: IFillRect
     virtual G::Color GetColor() override { return m_color; }

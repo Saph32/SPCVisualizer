@@ -3,9 +3,9 @@
 #include "IElem.h"
 
 namespace G {
-class IFillRect : public IElem {
+class ISolidBox : public IElem {
   public:
-    virtual ~IFillRect() override {}
+    virtual ~ISolidBox() override {}
 
     virtual RectF GetRect()  = 0;
     virtual Color GetColor() = 0;
@@ -14,6 +14,6 @@ class IFillRect : public IElem {
     virtual void SetColor(const Color& rColor) = 0;
 
   protected:
-    IFillRect() {}
+    ISolidBox() {}
 };
 }  // namespace G

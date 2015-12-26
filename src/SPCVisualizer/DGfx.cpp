@@ -1,5 +1,5 @@
 #include "DCore.h"
-#include "DFillRect.h"
+#include "DSolidBox.h"
 #include "DGfx.h"
 
 using namespace std;
@@ -19,8 +19,13 @@ std::unique_ptr<G::IRender> DGfx::CreateRender() {
     return make_unique<DRender>(*m_pCore);
 }
 
-std::unique_ptr<G::IFillRect> DGfx::CreateFillRect(const G::RectF& rRect, const G::Color& rColor) {
-    return make_unique<DFillRect>(*m_pCore, rRect, rColor);
+std::unique_ptr<G::ISolidBox> DGfx::CreateSolidBox(const G::RectF& rRect, const G::Color& rColor) {
+    return make_unique<DSolidBox>(*m_pCore, rRect, rColor);
+}
+
+void DGfx::FillRect(const G::RectF & rRect, const G::Color & rColor)
+{
+    m_pCore->DrawFillRect(rRect, rColor);
 }
 
 bool DGfx::Init() {

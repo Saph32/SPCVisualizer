@@ -1,6 +1,6 @@
 #include "Visualizer.h"
 
-#include "IFillRect.h"
+#include "ISolidBox.h"
 #include "IRender.h"
 #include "SplitView.h"
 
@@ -15,11 +15,8 @@ Visualizer::Visualizer(G::IGfx& rGfx) : m_rGfx(rGfx) {
 void Visualizer::RenderFrame() {
     SplitView whole(RectF{-1,-1,1,1});
 
-    SplitView grid(whole, Size{2, 2});
+    SplitViewV grid(whole, 2);
 
-    Color c = { 255,255,255 };
-
-    auto pBox = m_rGfx.CreateFillRect(grid.Cell(1, 1), c);
-
-    pBox->Draw();
+    m_rGfx.FillRect(grid.Cell(0), { 0,200,100 });
+    m_rGfx.FillRect(grid.Cell(1), { 100,200,40 });
 }

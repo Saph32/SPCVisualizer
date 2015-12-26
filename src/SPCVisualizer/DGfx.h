@@ -11,8 +11,10 @@ class DGfx : public G::IGfx {
 
     // Interface implementation : IGfx
     virtual std::unique_ptr<G::IRender>   CreateRender() override;
-    virtual std::unique_ptr<G::IFillRect> CreateFillRect(const G::RectF& rRect,
+    virtual std::unique_ptr<G::ISolidBox> CreateSolidBox(const G::RectF& rRect,
                                                          const G::Color& rColor) override;
+
+    virtual void FillRect(const G::RectF& rRect, const G::Color& rColor) override;
 
     // Other methods
     bool Init();
