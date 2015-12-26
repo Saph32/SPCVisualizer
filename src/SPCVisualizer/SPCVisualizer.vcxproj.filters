@@ -86,13 +86,7 @@
     <ClInclude Include="IFillRect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FillRectBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DFillRect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

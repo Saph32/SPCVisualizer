@@ -145,10 +145,8 @@
     <ClInclude Include="DFillRect.h" />
     <ClInclude Include="DGfx.h" />
     <ClInclude Include="DRender.h" />
-    <ClInclude Include="FillRectBase.h" />
     <ClInclude Include="IElem.h" />
     <ClInclude Include="IFillRect.h" />
-    <ClInclude Include="RenderBase.h" />
     <ClInclude Include="SplitView.h" />
     <ClInclude Include="Visualizer.h" />
     <ClInclude Include="unique_handle.h" />
