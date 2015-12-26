@@ -15,7 +15,7 @@ struct SplitView {
         return Cell(static_cast<float>(x), static_cast<float>(y));
     }
 
-    constexpr RectF Cell(float x, float y) const { return Sub(x, y, x + 1, y + 1); }
+    constexpr RectF Cell(float x, float y) const { return Sub(x, y, 1, 1); }
 
     constexpr RectF Sub(float x, float y, float w, float h) const {
         return RectF{rect.l + (rect.Width() / split.w) * x,
@@ -39,8 +39,8 @@ struct SplitViewH : public SplitView{
         : SplitView(rRect, SizeF{splitParam, 1 }) {}
 
     constexpr RectF Cell(int32 x) const { return SplitView::Cell(x, 0); }
-    constexpr RectF Cell(float x) const { return SplitView::Cell(x, 0.0f); }
-    constexpr RectF Sub(float x, float w) const { return SplitView::Sub(x, 0, w, 1); }
+     constexpr RectF Cell(float x) const { return SplitView::Cell(x, 0.0f); }
+     constexpr RectF Sub(float x, float w) const { return SplitView::Sub(x, 0, w, 1); }
 
 };
 

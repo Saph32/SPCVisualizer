@@ -15,7 +15,7 @@ class IGfx {
     virtual ~IGfx() {}
 
     virtual std::unique_ptr<IRender> CreateRender() = 0;
-    virtual std::unique_ptr<IFillRect> CreateFillRect(const Color& rColor) = 0;
+    virtual std::unique_ptr<IFillRect> CreateFillRect(const RectF& rRect, const Color& rColor) = 0;
 
   protected:
     IGfx(){};

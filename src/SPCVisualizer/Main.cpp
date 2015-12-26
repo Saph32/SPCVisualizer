@@ -7,7 +7,8 @@
 #pragma comment(lib, "SDL2.lib")
 #pragma comment(lib, "SDL2main.lib")
 
-#include "DCore.h"
+#include "Visualizer.h"
+#include "DGfx.h"
 
 using namespace std;
 
@@ -18,9 +19,9 @@ void SdlAudioCb(void* pUser, uint8* stream, int len) {
 }
 
 int main(int argc, char* argv[]) {
-    DCore dCore;
+    DGfx dGfx;
 
-    if (!dCore.Init()) {
+    if (!dGfx.Init()) {
         return 1;
     }
 
@@ -52,6 +53,8 @@ int main(int argc, char* argv[]) {
     // g_oSoundModule.Run(500000000);
 
     SDL_PauseAudio(0);
+
+    Visualizer vis(dGfx);
 
     cin.get();
 

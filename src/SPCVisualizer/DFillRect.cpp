@@ -1,10 +1,11 @@
 #include "DFillRect.h"
+#include "DCore.h"
 
 using namespace std;
 using namespace G;
 using namespace DirectX;
 
-void DFillRect::Draw(const G::RectF & rRect)
+void DFillRect::Draw()
 {
-    // call core to draw a filled rectangle or get core d3d elements to draw
+    m_rCore.DrawFillRect(m_rect, m_color);
 }

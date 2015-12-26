@@ -25,8 +25,8 @@ typedef PosT<float> PosF;
 template <typename T>
 struct RectT {
     T l;
-    T r;
     T t;
+    T r;
     T b;
 
     constexpr T Width() const { return r - l; }

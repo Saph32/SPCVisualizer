@@ -1,21 +1,25 @@
 #pragma once
 
 #include "IGfx.h"
-#include "DIntf.h"
-#include "DRender.h"
-#include "DFillRect.h"
 
-class DGfx : public G::IGfx
-{
-public:
+class DCore;
 
-    DGfx(DCore& rCore) : m_rCore(rCore) {}
-    virtual ~DGfx() {}
+class DGfx : public G::IGfx {
+  public:
+    DGfx();
+    virtual ~DGfx();
 
-    virtual std::unique_ptr<G::IRender> CreateRender() override;
-    virtual std::unique_ptr<G::IFillRect> CreateFillRect(const G::Color& rColor) override;
+    // Interface implementation : IGfx
+    virtual std::unique_ptr<G::IRender>   CreateRender() override;
+    virtual std::unique_ptr<G::IFillRect> CreateFillRect(const G::RectF& rRect,
+                                                         const G::Color& rColor) override;
 
-private:
+    // Other methods
+    bool Init();
+    void Release();
 
-    DCore& m_rCore;
+  private:
+    bool m_init = false;
+
+    std::unique_ptr<DCore> m_pCore;
 };

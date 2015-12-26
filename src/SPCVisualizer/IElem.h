@@ -7,7 +7,7 @@ class IElem {
   public:
     virtual ~IElem() {}
 
-    virtual void Draw(const RectF& rRect) = 0;
+    virtual void Draw() = 0;
 
   protected:
     IElem() {}
