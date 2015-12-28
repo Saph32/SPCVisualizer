@@ -115,6 +115,8 @@ void DSP::voice_3c(voice_t& v) {
         if (state.kon & v.vbit) {
             v.kon_delay = 5;
             v.env_mode = env_attack;
+
+            g_oSoundModule.RefVis().keyOn[v.vidx >> 4] = 32767;
         }
     }
 

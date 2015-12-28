@@ -3,6 +3,9 @@
 #include "IGfx.h"
 #include "IRender.h"
 #include "VolMeter.h"
+#include "Light.h"
+
+#include <vector>
 
 class Visualizer final
 {
@@ -25,4 +28,6 @@ private:
 
     std::unique_ptr<G::VolMeter> m_pVolL;
     std::unique_ptr<G::VolMeter> m_pVolR;
+
+    std::vector<std::unique_ptr<G::Light>> m_vecKeyOn;
 };

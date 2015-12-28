@@ -14,6 +14,8 @@ class SoundModule final {
       {
           std::deque<int16> sampsL;
           std::deque<int16> sampsR;
+
+          int16 keyOn[8];
       };
 
     SoundModule() = default;

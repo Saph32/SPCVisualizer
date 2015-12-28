@@ -137,6 +137,7 @@
     <ClCompile Include="DSolidBox.cpp" />
     <ClCompile Include="DGfx.cpp" />
     <ClCompile Include="DRender.cpp" />
+    <ClCompile Include="Light.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="SoundModule.cpp" />
     <ClCompile Include="Visualizer.cpp" />
@@ -151,6 +152,7 @@
     <ClInclude Include="Flat2DVS.h" />
     <ClInclude Include="IElem.h" />
     <ClInclude Include="ISolidBox.h" />
+    <ClInclude Include="Light.h" />
     <ClInclude Include="SplitView.h" />
     <ClInclude Include="Visualizer.h" />
     <ClInclude Include="unique_handle.h" />

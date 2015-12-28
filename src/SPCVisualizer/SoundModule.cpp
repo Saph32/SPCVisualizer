@@ -53,6 +53,14 @@ void SoundModule::PushSample(int16 iLeft, int16 iRight) {
 
     m_visState.sampsL.push_back(iLeft);
     m_visState.sampsR.push_back(iRight);
+
+    for (auto& rKeyOn : m_visState.keyOn)
+    {
+        if (rKeyOn > 0)
+        {
+            rKeyOn--;
+        }
+    }
 }
 
 uint8 SoundModule::ReadDspReg(uint8 uiAddr) {
