@@ -44,4 +44,13 @@ struct Color {
     uint8 a;
 };
 
+enum EnvMode
+{
+    // Values match env_mode_t from dsp.hpp
+    EnvModeAttack,
+    EnvModeDecay,
+    EnvModeSustain,
+    EnvModeRelease,
+};
+
 }  // namespace G

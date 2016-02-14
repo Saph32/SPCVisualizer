@@ -47,13 +47,21 @@ void DSP::envelope_run(voice_t& v) {
   }
 
   //sustain level
-  if((env >> 8) == (env_data >> 5) && v.env_mode == env_decay) v.env_mode = env_sustain;
+  if ((env >> 8) == (env_data >> 5) && v.env_mode == env_decay)
+  {
+      v.env_mode = env_sustain;
+      g_oSoundModule.RefVis().envMode[v.vidx >> 4] = G::EnvModeSustain;
+  }
   v.hidden_env = env;
 
   //unsigned cast because linear decrease underflowing also triggers this
   if((unsigned)env > 0x7ff) {
     env = (env < 0 ? 0 : 0x7ff);
-    if(v.env_mode == env_attack) v.env_mode = env_decay;
+    if (v.env_mode == env_attack)
+    {
+        v.env_mode = env_decay;
+        g_oSoundModule.RefVis().envMode[v.vidx >> 4] = G::EnvModeDecay;
+    }
   }
 
   if(counter_poll(rate) == true) v.env = env;

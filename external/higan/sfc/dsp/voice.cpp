@@ -109,12 +109,14 @@ void DSP::voice_3c(voice_t& v) {
         //KOFF
         if (state.t_koff & v.vbit) {
             v.env_mode = env_release;
+            g_oSoundModule.RefVis().envMode[v.vidx >> 4] = G::EnvModeRelease;
         }
 
         //KON
         if (state.kon & v.vbit) {
             v.kon_delay = 5;
             v.env_mode = env_attack;
+            g_oSoundModule.RefVis().envMode[v.vidx >> 4] = G::EnvModeAttack;
 
             g_oSoundModule.RefVis().keyOn[v.vidx >> 4] = 32767;
         }

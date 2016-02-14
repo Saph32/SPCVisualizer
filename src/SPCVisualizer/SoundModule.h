@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BaseTypes.h"
+#include "GTypes.h"
 
 #include <fstream>
 #include <string>
@@ -15,7 +16,9 @@ class SoundModule final {
           std::deque<int16> sampsL;
           std::deque<int16> sampsR;
 
-          int16 keyOn[8];
+          int16 keyOn[8] = {0};
+
+          G::EnvMode envMode[8] = {G::EnvModeRelease};
       };
 
     SoundModule() = default;

@@ -4,6 +4,7 @@
 #include "IRender.h"
 #include "VolMeter.h"
 #include "Light.h"
+#include "Env.h"
 
 #include <vector>
 
@@ -29,5 +30,6 @@ private:
     std::unique_ptr<G::VolMeter> m_pVolL;
     std::unique_ptr<G::VolMeter> m_pVolR;
 
-    std::vector<std::unique_ptr<G::Light>> m_vecKeyOn;
+    std::vector<std::unique_ptr<G::Light>>  m_vecKeyOn;
+    std::vector<std::unique_ptr<G::Env>>    m_vecEnv;
 };

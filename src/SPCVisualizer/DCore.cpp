@@ -21,6 +21,10 @@ DCore::~DCore() {
     if (m_init) {
         Release();
     }
+
+    if (m_thread.joinable()) {
+        m_thread.join();
+    }
 }
 
 bool DCore::Init() {

@@ -36,6 +36,8 @@ void Visualizer::RenderFrame() {
             auto& rKeyOn = *m_vecKeyOn.back();
 
             rKeyOn.SetColor({(uint8)(199 + 8 * voice), 255, (uint8)(255 - 8 * voice), 255});
+
+            m_vecEnv.emplace_back(new Env(m_rGfx));
         }
 
         m_init = true;
@@ -44,7 +46,7 @@ void Visualizer::RenderFrame() {
 
     SplitView whole(RectF{-1,-1,1,1});
 
-    SplitViewV grid(whole, 3);
+    SplitViewV grid(whole, 4);
 
     m_pVolL->SetRect(grid.Cell(0));
     m_pVolR->SetRect(grid.Cell(1));
@@ -78,11 +80,24 @@ void Visualizer::RenderFrame() {
         rKeyOnLight.SetVal((float)state.keyOn[voice]);
     }
 
+    SplitViewH envZone(grid.Cell(3), 8);
+
+    for (int voice = 0; voice < 8; ++voice)
+    {
+        auto& rEnv = *m_vecEnv[voice];
+
+        rEnv.SetRect(envZone.Cell(voice));
+        rEnv.SetMode(state.envMode[voice]);
+    }
+
+    // Draw everything
+
     m_pVolL->Draw();
     m_pVolR->Draw();
 
     for (int voice = 0; voice < 8; ++voice)
     {
         m_vecKeyOn[voice]->Draw();
+        m_vecEnv[voice]->Draw();
     }
 }
